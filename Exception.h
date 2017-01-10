@@ -1,6 +1,7 @@
 #ifndef EXCEPTION_H
 #define EXCEPTION_H
 
+
 #include <iostream>
 using std::ostream;
 
@@ -12,11 +13,12 @@ public:
 	Exception(const Exception & copy); // copy ctor
 	Exception& operator=(const Exception & rhs);
 	~Exception();
-	const char * GetMessage();
+	 char * GetMessage() const;
 	void SetMessage(char * msg);
+
 private:
 	char * m_msg;
 };
 //output operator cannot be in the class because it has to be a data memeber this was the overloaded operator is free
-ostream& operator<<(ostream& stream, const Exception& except);
+
 #endif
