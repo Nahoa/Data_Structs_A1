@@ -45,6 +45,7 @@ Exception & Exception::operator=(const Exception & rhs)
 Exception::~Exception()
 {
 	delete[] m_msg;
+	m_msg = nullptr;
 }
 
 char * Exception::GetMessage() const
